@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-sample';
+  constructor(private router: Router) {
+  }
+  clickButton(path: string) {
+    this.router.navigate([path]);
+  }
 }

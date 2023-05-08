@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('https://img.freepik.com/free-vector/white-gold-geometric-pattern-background-vector_53876-140726.jpg?w=900&t=st=1683471121~exp=1683471721~hmac=3897abf3dd41f86ce0ed3c4b9ee0833166008abbf44f7213dee088d1de1e8e99');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.nice{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  //text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  text-shadow: 1px 1px #ccc;
+}
