@@ -1,0 +1,13 @@
+<div class="users-container">
+<h2 class = "nice" >Welcome to your account!</h2>
+  <ul>
+    <li *ngFor="let user of userI">
+      <p class="nice">Id: {{user.id}}</p>
+      <p class="nice">First Name: {{user.firstname}}</p>
+      <p class="nice">Last Name: {{user.lastname}}</p>
+      <p class="nice">Email: {{user.email}}</p>
+      <p class="nice">Phone: {{user.phone}}</p>
+    </li>
+  </ul>
+
+</div>

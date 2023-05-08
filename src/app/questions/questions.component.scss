@@ -1,0 +1,33 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 400px;
+  padding: 16px;
+  margin: 24px 0px;
+  background-color: whitesmoke;
+  font-family: sans-serif;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: #ddd;
+  color: #333;
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+button {
+  background-color: coral;
+  padding: 4px 8px;
+  cursor: pointer;
+  border: 2px whitesmoke; /* Set the border to be 2px wide and blue in color */
+  border-radius: 4px; /* Add rounded corners to the button */
+  padding: 8px 16px; /* Add some padding to the button */
+  margin-right: 8px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}

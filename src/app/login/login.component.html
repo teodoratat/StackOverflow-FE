@@ -1,0 +1,21 @@
+<div class="content">
+<head>
+  <title>Login Page</title>
+</head>
+<body>
+<div id="container">
+  <h1>Log in</h1>
+  <form (submit)="login()">
+    <label for="username">Username/Email</label>
+    <input type="text" id="username" name="username" required>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+    <button type="submit">Sign in</button>
+  </form>
+
+</div>
+</body>
+</div>
+<div *ngIf="isLoggedIn">
+  <p>Hi, {{ username }}!</p>
+</div>

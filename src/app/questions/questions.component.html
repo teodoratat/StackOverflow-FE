@@ -1,0 +1,75 @@
+<div class="questions-container">
+  <div class="card" *ngFor="let question of questions" (click)="showAnswers(question)">
+    <h4>{{ question.title }}</h4>
+    <p>{{ question.body }}</p>
+    <p>Asked by {{ question.author }} on {{ question.date | date:'medium' }}</p>
+
+    <span class="tag" *ngFor="let tag of question.tags">{{ tag }}
+
+    </span>
+    <p>
+      <button (click)="showAnswers(question)">Show Answers</button>
+    <ul *ngIf="question.showAnswers">
+      <li *ngIf="question.answers.length > 0; else noAnswers">
+        <ul>
+          <li *ngFor="let answer of question.answers">
+            <p>{{ answer.body }}</p>
+            <p>Author: {{ answer.author }}</p>
+            <p>Date: {{ answer.date | date }}</p>
+          </li>
+        </ul>
+      </li>
+      <ng-template #noAnswers>
+        <p>No answers yet.</p>
+      </ng-template>
+    <p><button (click)="formGroup"> Add a new answer</button>
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="answerBody">Answer:</label>
+        <textarea class="form-control" id="answerBody" rows="3" formControlName="answerBody"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    </ul>
+
+  </div>
+  <div *ngIf="questions.length > 0">
+    <h4>New Question:</h4>
+    <div class="card">
+      <h4>{{ questions[questions.length-1].title }}</h4>
+      <p>{{ questions[questions.length-1].body }}</p>
+      <p>Asked by {{ questions[questions.length-1].author }} on {{ questions[questions.length-1].date | date:'medium' }}</p>
+      <span class="tag" *ngFor="let tag of questions[questions.length-1].tags">{{ tag }}</span>
+    </div>
+  </div>
+  <div class = "form-container">
+  <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+    <p>
+    <label>
+      Title:
+      <input type="text" formControlName="title">
+    </label>
+    </p>
+    <p>
+    <label>
+      Body:
+      <textarea formControlName="body"></textarea>
+    </label>
+    </p>
+    <p>
+    <label>
+      Author:
+      <input type="text" formControlName="author">
+    </label>
+    </p>
+    <p>
+    <label>
+      Tags:
+      <input type="text" formControlName="tags">
+    </label>
+    </p>
+    <button type="submit">Submit</button>
+  </form>
+  </div>
+
+</div>
